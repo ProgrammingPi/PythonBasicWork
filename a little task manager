@@ -1,0 +1,47 @@
+import time
+lessons=[]
+
+lesson, num = input("insert data of tasks (end 0 to end):").split()
+while lesson != "end":
+    lessons.append(lesson)
+    lessons.append(int(num))
+    lesson, num = input("insert data of tasks (end 0 to end):").split()
+print("tasks aquired")
+time.sleep(1)
+print("Загрузка",end = "")
+time.sleep(1)
+  
+for i in range(6):
+    print(".",end="")
+print('')
+print("to update the console use: next()")
+print("Work = class methods: addWork(str(tasks),int(amount))")
+for i in range(0,len(lessons),2):
+    print(lessons[i]," осталось:",lessons[i+1])
+def next():
+  print("tasks aquired")
+  time.sleep(1)
+  print("loading",end = "")
+  time.sleep(1)
+  
+  
+  for i in range(6):
+      print(".",end="")
+  print('')
+  print("to update the console use: next()")
+  print(Work = class methods: addWork(str(tasks),int(amount)) adds work , changeWork(str(task),int(amout) replaces the work which is already made")
+  
+  for i in range(0,len(lessons),2):
+    print(lessons[i]," left:",lessons[i+1])
+
+class Work():
+  def addWork(work,number):
+    lessons.append(str(work))
+    lessons.append(int(number))
+    print("Work added")
+  def changeWork(work,number):
+    for i in range(len(lessons)):
+      if str(work) == lessons[i]:
+        lessons.remove(int(lessons[i+1]))
+        lessons.insert(i+1,int(number))
+    print("Work changed")
