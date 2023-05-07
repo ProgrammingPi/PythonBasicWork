@@ -33,7 +33,7 @@ def next():
   
   for i in range(0,len(lessons),2):
     print(lessons[i]," left:",lessons[i+1])
-
+# adding class and functions for it
 class Work():
   def addWork(work,number):
     lessons.append(str(work))
